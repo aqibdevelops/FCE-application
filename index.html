@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <title>FCE Shiftwise Details</title>
+    <link rel="icon" type="image/x-icon" href="FCE_logo.jpg">
+</head>
+<body>
+
+    <header>
+        <div class="image-container">
+            <img src="FCE_logo.jpg">
+        </div>
+        
+        <h1>FUEL CITY EAST</h1>
+
+        <div class="image-container">
+            <img src="Shell Logo PNG.jfif">
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="aside">
+            <a href="#">Sales Details</a>
+            <a href="#">Transaction Details</a>
+        </div>
+        <div class="content">
+            <form>
+
+                <div class="first-row">
+
+                    <!-- Multiselect -->
+                    <div class="multiselect">
+                        <div class="selectBox" onclick="showCheckBoxes()">
+                            <select>
+                                <option>Select an employee</option>
+                            </select>
+                        </div>
+                    
+                        <div class="overselect" id="checkboxes">
+                            <label for="one"><input type="checkbox" id="one"/>Maidul Hoque</label>
+                            <label for="two"><input type="checkbox" id="two"/>Inzamamul Hoque</label>
+                            <label for="three"><input type="checkbox" id="three"/>Sahidul Islam</label>
+                            <label for="four"><input type="checkbox" id="four"/>Rajkumar Chowhan</label>
+                            <label for="five"><input type="checkbox" id="five"/>Hrishikesh</label>
+                            <label for="six"><input type="checkbox" id="six"/>Sahidul Hoque</label>
+                            <button onclick="showCheckBoxes()">Done</button>
+                        </div>
+                    </div>
+
+                    <div class="select-shift">
+                        <Label>Shift: </Label>
+                        <select>
+                            <option value="1">Morning Shift</option>
+                            <option value="2">Day Shift</option>
+                            <option value="3">Night Shift</option>
+                        </select>
+                    </div>
+
+                        <!-- Date picker -->
+                    <div class = date-picker>
+                        <label for="day">Day:</label>
+                        <select id="day">
+                            <option>Select</option>
+                        </select>
+                        
+                        <label for="month">Month:</label>
+                        <select id="month">
+                            <option>Select</option>
+                        </select>
+                        
+                        <label for="year">Year:</label>
+                        <select id="year">
+                            <option>Select</option>
+                        </select>
+                    </div>
+
+
+                    <!-- <div class="multiselect">
+                        <label>Employees in shift</label>
+                        <select id='testSelect1' multiple>
+                            <option value='2'>Saidul Islam</option>
+                            <option value='3'>Khurshid Alam</option>
+                            <option value='4'>Inzamamul Hoque</option>
+                            <option value='5'>Rasidul</option>
+                            <option value='6'>Rajkumar Chowhan</option>
+                            <option value='7'>Hrishikesh</option>                        
+                            <option value='1'>Maidul Hoque</option>
+                        </select>
+                    </div> -->
+                </div>
+
+
+                <!-- Nozzle data input fields -->
+                <!-- <div class="card"> -->
+                    <div class="section-header">
+                        <span>MS(Petrol)</span>
+                        <div style="margin-top: 10px;">
+                            <label>MS price/litre</label>
+                            <input type="number">
+                        </div>
+                    </div>
+                    <div class="column-container">
+                        <div class="column names">
+                            <label>Name</label>
+                            <label>Closing</label>
+                            <label>Opening</label>
+                            <label>Difference</label>
+                        </div>
+                        <div class="column column-responsive">
+                            <label>Nozzle 1 </label>
+                            <input type="number" id="nozzle-1-closing">
+                            <input type="number" id="nozzle-1-opening">
+                            <input type="number" id="nozzle-1-difference">
+                        </div>
+                        <div class="column column-responsive">
+                            <label>Nozzle 2</label>
+                            <input type="number" id="nozzle-2-closing">
+                            <input type="number" id="nozzle-2-opening">
+                            <input type="number" id="nozzle-2-difference">
+                        </div>
+                        <div class="column column-responsive">
+                            <label>Nozzle 3</label>
+                            <input type="number" id="nozzle-3-closing">
+                            <input type="number" id="nozzle-3-opening">
+                            <input type="number" id="nozzle-3-difference">
+                        </div>
+                        <div class="column column-responsive">
+                            <label>Nozzle 4</label>
+                            <input type="number" id="nozzle-4-closing">
+                            <input type="number" id="nozzle-1-opening">
+                            <input type="number" id="nozzle-4-difference">
+                        </div>
+                    </div>
+                    <p> Total MS sale in Litres</p>
+                    <p> Total MS sale in Rupees</p>
+
+
+                    <div class="section-header">
+                        <span>HSD(Diesel)</span>
+                        <div style="margin-top: 10px;";">
+                            <label>HSD price/litre</label>
+                            <input type="number">
+                        </div>
+                    </div>
+
+                    <div class="column-container">
+                        <div class="column names">
+                            <label>Name</label>
+                            <label>Closing</label>
+                            <label>Opening</label>
+                            <label>Difference</label>
+                        </div>
+                        <div class="column column-responsive">
+                            <label>Nozzle 1         </label>
+                            <input type="number" id="nozzle-1-closing">
+                            <input type="number" id="nozzle-1-opening">
+                            <input type="number" id="nozzle-1-difference">
+                        </div>
+                        <div class="column column-responsive">
+                            <label>Nozzle 2</label>
+                            <input type="number" id="nozzle-2-closing">
+                            <input type="number" id="nozzle-2-opening">
+                            <input type="number" id="nozzle-2-difference">
+                        </div>
+                        <div class="column column-responsive">
+                            <label>Nozzle 3</label>
+                            <input type="number" id="nozzle-3-closing">
+                            <input type="number" id="nozzle-3-opening">
+                            <input type="number" id="nozzle-3-difference">
+                        </div>
+                        <div class="column column-responsive">
+                            <label>Nozzle 4</label>
+                            <input type="number" id="nozzle-4-closing">
+                            <input type="number" id="nozzle-1-opening">
+                            <input type="number" id="nozzle-4-difference">
+                        </div>
+                    </div>
+                    <p> Total HSD sale in Litres</p>
+                    <p> Total HSD sale in Rupees</p>
+
+
+                <!-- </div> -->
+                <button type="submit">Submit</button>
+
+
+            </form>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="logic.js"></script>
+</body>
+</html>
